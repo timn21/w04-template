@@ -1,7 +1,7 @@
-package de.tum.aet.devops26.w05.controller;
+package de.tum.aet.devops26.w04.controller;
 
-import de.tum.aet.devops26.w05.model.Dish;
-import de.tum.aet.devops26.w05.service.CanteenService;
+import de.tum.aet.devops26.w04.model.Dish;
+import de.tum.aet.devops26.w04.service.CanteenService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
