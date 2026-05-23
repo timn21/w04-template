@@ -21,7 +21,7 @@ services:
       - ./letsencrypt:/letsencrypt
 
   server:
-    image: ghcr.io/aet-devops26/w04-template/server:latest
+    image: ghcr.io/timn21/w04-template/server:latest
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     restart: unless-stopped
@@ -33,7 +33,7 @@ services:
       - "traefik.http.routers.server.tls.certresolver=letsencrypt"
 
   client:
-    image: ghcr.io/aet-devops26/w04-template/client:latest
+    image: ghcr.io/timn21/w04-template/client:latest
     environment:
       - PUBLIC_API_URL=${PUBLIC_API_URL}
     depends_on:
