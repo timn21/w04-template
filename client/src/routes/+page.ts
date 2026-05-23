@@ -8,6 +8,7 @@ let baseUrl = env.PUBLIC_API_URL || "http://localhost:8080";
 
 export const load: PageLoad = async ({ fetch }) => {
     const res = await fetch(`${baseUrl}/mensa-garching/today`);
+    if (!res.ok) return { meals: [] };
     const meals = await res.json();
     
     return { meals };
